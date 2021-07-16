@@ -49,10 +49,33 @@ namespace DL
             var createAnAccount = reader.Read().ToString();
             sqlConnection.Close();
             return createAnAccount;
-            
-
-
-
         }
+
+        static public string DeleteAnAccount(string name)
+        {
+            var deleteStatement = "DELETE FROM dbo.Table_1 WHERE Name = @Name";
+            SqlCommand deleteCommand = new SqlCommand(deleteStatement,sqlConnection);
+
+            deleteCommand.Parameters.AddWithValue("@Name", name);
+
+            sqlConnection.Open();
+            SqlDataReader reader = deleteCommand.ExecuteReader();
+            var deleteAnAccount = reader.Read().ToString();
+            sqlConnection.Close();
+            return deleteAnAccount;
+        }
+
+        static public string ValidateAccount(string name)
+        {
+            var selectStatement = "SELECT Name FROM dbo.Table_1 WHERE Name=@Name";
+            SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
+            selectCommand.Parameters.AddWithValue("@Name",name);
+            sqlConnection.Open();
+            SqlDataReader reader = selectCommand.ExecuteReader();
+            var isExist = reader.Read() ? reader["Name"].ToString() : string.Empty;
+            sqlConnection.Close();
+            return isExist;
+        }
+
     }
 }

@@ -37,6 +37,7 @@ namespace UI
                         break;
                     case 3:
                         Console.Clear();
+                        DeleteAnAccount();
                         break;
                     default:
                         Console.Clear();
@@ -94,6 +95,30 @@ namespace UI
             Console.Clear();
 
             SqlData.CreateAnAccount(name,id,contact);
+        }
+
+        static void DeleteAnAccount()
+        {
+            SqlData.DisplayCourierData();
+            
+            
+            Console.WriteLine("Yo, gimme the name of this nub u wanna DELETE!\n");
+            Console.Write("Name: ");
+            string name = Convert.ToString(Console.ReadLine());
+
+            if (SqlData.ValidateAccount())
+            {
+
+            }
+
+            Console.WriteLine("Congrats! Nub deleted!");
+            Console.ReadKey();
+            Console.Clear();
+
+            SqlData.DeleteAnAccount(name);
+            
+           
+
         }
     }
 }
