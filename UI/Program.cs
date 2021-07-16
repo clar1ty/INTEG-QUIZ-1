@@ -106,19 +106,23 @@ namespace UI
             Console.Write("Name: ");
             string name = Convert.ToString(Console.ReadLine());
 
-            if (SqlData.ValidateAccount())
+            var VerifyIfAccountExist = SqlData.ValidateAccount(name);
+
+            if (VerifyIfAccountExist.Equals("True"))
             {
-
+                Console.WriteLine("Congrats! Nub deleted!");
+                Console.ReadKey();
+                Console.Clear();
             }
-
-            Console.WriteLine("Congrats! Nub deleted!");
-            Console.ReadKey();
-            Console.Clear();
-
-            SqlData.DeleteAnAccount(name);
+            else
+            {
+                Console.WriteLine("Error nub! Try again!");
+                Console.ReadKey();
+                Console.Clear();
+                DeleteAnAccount();
+            }
             
-           
-
+            SqlData.DeleteAnAccount(name);
         }
     }
 }

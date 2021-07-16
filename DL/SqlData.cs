@@ -72,7 +72,7 @@ namespace DL
             selectCommand.Parameters.AddWithValue("@Name",name);
             sqlConnection.Open();
             SqlDataReader reader = selectCommand.ExecuteReader();
-            var isExist = reader.Read() ? reader["Name"].ToString() : string.Empty;
+            var isExist = reader.Read().ToString();
             sqlConnection.Close();
             return isExist;
         }
