@@ -164,6 +164,9 @@
       "BL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DL": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/BL.dll": {}
         },
@@ -689,7 +692,6 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "BL >= 1.0.0",
-      "DL >= 1.0.0",
       "System.Collections >= 4.3.0"
     ]
   },
@@ -722,9 +724,6 @@
           "projectReferences": {
             "C:\\Users\\63909\\source\\repos\\CMS\\BL\\BL.csproj": {
               "projectPath": "C:\\Users\\63909\\source\\repos\\CMS\\BL\\BL.csproj"
-            },
-            "C:\\Users\\63909\\source\\repos\\CMS\\DL\\DL.csproj": {
-              "projectPath": "C:\\Users\\63909\\source\\repos\\CMS\\DL\\DL.csproj"
             }
           }
         }

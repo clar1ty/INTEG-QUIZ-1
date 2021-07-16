@@ -10,3 +10,6 @@ C:\Users\63909\source\repos\CMS\BL\obj\Debug\net5.0\BL.csproj.CoreCompileInputs.
 C:\Users\63909\source\repos\CMS\BL\obj\Debug\net5.0\BL.dll
 C:\Users\63909\source\repos\CMS\BL\obj\Debug\net5.0\ref\BL.dll
 C:\Users\63909\source\repos\CMS\BL\obj\Debug\net5.0\BL.pdb
+C:\Users\63909\source\repos\CMS\BL\bin\Debug\net5.0\DL.dll
+C:\Users\63909\source\repos\CMS\BL\bin\Debug\net5.0\DL.pdb
+C:\Users\63909\source\repos\CMS\BL\obj\Debug\net5.0\BL.csproj.CopyComplete

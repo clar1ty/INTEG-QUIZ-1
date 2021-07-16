@@ -27,7 +27,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\63909\\source\\repos\\CMS\\DL\\DL.csproj": {
+                "projectPath": "C:\\Users\\63909\\source\\repos\\CMS\\DL\\DL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -144,9 +148,6 @@
             "projectReferences": {
               "C:\\Users\\63909\\source\\repos\\CMS\\BL\\BL.csproj": {
                 "projectPath": "C:\\Users\\63909\\source\\repos\\CMS\\BL\\BL.csproj"
-              },
-              "C:\\Users\\63909\\source\\repos\\CMS\\DL\\DL.csproj": {
-                "projectPath": "C:\\Users\\63909\\source\\repos\\CMS\\DL\\DL.csproj"
               }
             }
           }

@@ -9,7 +9,6 @@
       "UI/1.0.0": {
         "dependencies": {
           "BL": "1.0.0",
-          "DL": "1.0.0",
           "System.Collections": "4.3.0"
         },
         "runtime": {
@@ -106,6 +105,9 @@
       },
       "System.Security.Principal.Windows/4.7.0": {},
       "BL/1.0.0": {
+        "dependencies": {
+          "DL": "1.0.0"
+        },
         "runtime": {
           "BL.dll": {}
         }

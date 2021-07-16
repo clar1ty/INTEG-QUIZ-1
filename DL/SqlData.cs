@@ -14,7 +14,7 @@ namespace DL
 
         static SqlConnection sqlConnection = new SqlConnection(connectionString);
 
-       
+
         static public string DisplayCourierData()
         {
             var selectStatement = "select * from dbo.Table_1";
@@ -38,11 +38,11 @@ namespace DL
         {
             var insertStatement = "INSERT INTO dbo.Table_1 (Name, ID, Contact) VALUES (@Name, @ID, @Contact)";
             SqlCommand insertCommand = new SqlCommand(insertStatement, sqlConnection);
-            
 
-            insertCommand.Parameters.AddWithValue("@Name",name);
-            insertCommand.Parameters.AddWithValue("@ID",id);
-            insertCommand.Parameters.AddWithValue("@Contact",contact);
+
+            insertCommand.Parameters.AddWithValue("@Name", name);
+            insertCommand.Parameters.AddWithValue("@ID", id);
+            insertCommand.Parameters.AddWithValue("@Contact", contact);
 
             sqlConnection.Open();
             SqlDataReader reader = insertCommand.ExecuteReader();
@@ -54,7 +54,7 @@ namespace DL
         static public string DeleteAnAccount(string name)
         {
             var deleteStatement = "DELETE FROM dbo.Table_1 WHERE Name = @Name";
-            SqlCommand deleteCommand = new SqlCommand(deleteStatement,sqlConnection);
+            SqlCommand deleteCommand = new SqlCommand(deleteStatement, sqlConnection);
 
             deleteCommand.Parameters.AddWithValue("@Name", name);
 
@@ -69,12 +69,24 @@ namespace DL
         {
             var selectStatement = "SELECT Name FROM dbo.Table_1 WHERE Name=@Name";
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            selectCommand.Parameters.AddWithValue("@Name",name);
+            selectCommand.Parameters.AddWithValue("@Name", name);
             sqlConnection.Open();
             SqlDataReader reader = selectCommand.ExecuteReader();
             var isExist = reader.Read().ToString();
             sqlConnection.Close();
             return isExist;
+        }
+        static public string ValidateUser(string userid, string name)
+        {
+            var selectStatement = "SELECT userrole FROM dbo.Table_2 WHERE userid=@userid and name=@Name";
+            SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
+            selectCommand.Parameters.AddWithValue("@userid", userid);
+            selectCommand.Parameters.AddWithValue("@name", name);
+            sqlConnection.Open();
+            SqlDataReader reader = selectCommand.ExecuteReader();
+            var userRole = reader.Read().ToString();
+            sqlConnection.Close();
+            return userRole;
         }
 
     }

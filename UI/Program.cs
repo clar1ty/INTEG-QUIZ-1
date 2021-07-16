@@ -6,16 +6,17 @@ namespace UI
 {
     class Program
     {
+
         static List<string> showoptions = new List<string>()
                     {
                         "(1) Show me courier list.",
                         "(2) Lemme create an account.",
-                        "(3) Lemme delete  this nub.",
+                        "(3) Lemme delete  a nub account.",
                         "(4) NVM, just exit."
                     };
         static void Main(string[] args)
         {
-           
+            
             ProcessActionsForAdmin();
         }
 
@@ -46,10 +47,11 @@ namespace UI
                 }
                 Console.WriteLine();
             }
+            Console.Clear();
             Console.WriteLine("Application exiting...");
             Console.ReadKey();
         }
-        
+
         static int GetUserChoice()
         {
             try
@@ -80,13 +82,13 @@ namespace UI
         {
             string name, id; int contact;
             Console.WriteLine("Yo, give me the following details:\n");
-            
+
             Console.Write("Name: ");
             name = Console.ReadLine();
-            
+
             Console.Write("ID: ");
             id = Console.ReadLine();
-            
+
             Console.Write("Contact Number: ");
             contact = Convert.ToInt32(Console.ReadLine());
 
@@ -94,14 +96,14 @@ namespace UI
             Console.ReadKey();
             Console.Clear();
 
-            SqlData.CreateAnAccount(name,id,contact);
+            SqlData.CreateAnAccount(name, id, contact);
         }
 
         static void DeleteAnAccount()
         {
             SqlData.DisplayCourierData();
-            
-            
+
+
             Console.WriteLine("Yo, gimme the name of this nub u wanna DELETE!\n");
             Console.Write("Name: ");
             string name = Convert.ToString(Console.ReadLine());
@@ -121,7 +123,7 @@ namespace UI
                 Console.Clear();
                 DeleteAnAccount();
             }
-            
+
             SqlData.DeleteAnAccount(name);
         }
     }
