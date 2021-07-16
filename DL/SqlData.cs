@@ -33,5 +33,26 @@ namespace DL
             sqlConnection.Close();
             return showCourier;
         }
+
+        static public string CreateAnAccount(string name, string id, int contact)
+        {
+            var insertStatement = "INSERT INTO dbo.Table_1 (Name, ID, Contact) VALUES (@Name, @ID, @Contact)";
+            SqlCommand insertCommand = new SqlCommand(insertStatement, sqlConnection);
+            
+
+            insertCommand.Parameters.AddWithValue("@Name",name);
+            insertCommand.Parameters.AddWithValue("@ID",id);
+            insertCommand.Parameters.AddWithValue("@Contact",contact);
+
+            sqlConnection.Open();
+            SqlDataReader reader = insertCommand.ExecuteReader();
+            var createAnAccount = reader.Read().ToString();
+            sqlConnection.Close();
+            return createAnAccount;
+            
+
+
+
+        }
     }
 }

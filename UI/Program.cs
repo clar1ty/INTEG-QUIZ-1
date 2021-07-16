@@ -9,7 +9,7 @@ namespace UI
         static List<string> showoptions = new List<string>()
                     {
                         "(1) Show me courier list.",
-                        "(2) Lemme update an account.",
+                        "(2) Lemme create an account.",
                         "(3) Lemme delete  this nub.",
                         "(4) NVM, just exit."
                     };
@@ -33,6 +33,7 @@ namespace UI
                         break;
                     case 2:
                         Console.Clear();
+                        CreateNewAccount();
                         break;
                     case 3:
                         Console.Clear();
@@ -72,6 +73,27 @@ namespace UI
             {
                 Console.WriteLine(option);
             }
+        }
+
+        static void CreateNewAccount()
+        {
+            string name, id; int contact;
+            Console.WriteLine("Yo, give me the following details:\n");
+            
+            Console.Write("Name: ");
+            name = Console.ReadLine();
+            
+            Console.Write("ID: ");
+            id = Console.ReadLine();
+            
+            Console.Write("Contact Number: ");
+            contact = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\nAccount successfully created dude!");
+            Console.ReadKey();
+            Console.Clear();
+
+            SqlData.CreateAnAccount(name,id,contact);
         }
     }
 }
