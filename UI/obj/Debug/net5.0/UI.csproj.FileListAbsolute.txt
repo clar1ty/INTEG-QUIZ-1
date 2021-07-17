@@ -25,3 +25,4 @@ C:\Users\63909\source\repos\CMS\UI\bin\Debug\net5.0\DL.dll
 C:\Users\63909\source\repos\CMS\UI\bin\Debug\net5.0\BL.pdb
 C:\Users\63909\source\repos\CMS\UI\bin\Debug\net5.0\DL.pdb
 C:\Users\63909\source\repos\CMS\UI\obj\Debug\net5.0\UI.csproj.CopyComplete
+C:\Users\63909\source\repos\CMS\UI\bin\Debug\net5.0\NuGet.Frameworks.dll

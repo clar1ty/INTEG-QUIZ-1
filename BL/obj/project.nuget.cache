@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6B/4zj7pMBIqkEt36p3RHA+gpIw3O6rWccXtrH6OehvTiZYDE3ylp5OGg93R1TQpaCKq9e7P1dokDpQ1MSEMHw==",
+  "dgSpecHash": "b94OtF3BX1q33gg8eNjbvX7iRUuMNx/WjHJiQC7vd9Nn4/kJlW8nYvygfJlH5BOboqaneSzo6AGtvD1Ucal+Xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\63909\\source\\repos\\CMS\\BL\\BL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\63909\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\63909\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\63909\\.nuget\\packages\\nuget.frameworks\\5.10.0\\nuget.frameworks.5.10.0.nupkg.sha512",
     "C:\\Users\\63909\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\63909\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\63909\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

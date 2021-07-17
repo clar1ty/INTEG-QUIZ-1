@@ -34,6 +34,15 @@
           }
         }
       },
+      "NuGet.Frameworks/5.10.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -209,6 +218,24 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "NuGet.Frameworks/5.10.0": {
+      "sha512": "RaXCqj2ZImTVV0DhlwMkE7S7EoOxqkdpmg4YNeZc5DnFpMMC7HYj6TbNTufK25JN/QhKfftuiWf/oqaYkZhnAA==",
+      "type": "package",
+      "path": "nuget.frameworks/5.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net40/NuGet.Frameworks.dll",
+        "lib/net40/NuGet.Frameworks.xml",
+        "lib/net472/NuGet.Frameworks.dll",
+        "lib/net472/NuGet.Frameworks.xml",
+        "lib/netstandard2.0/NuGet.Frameworks.dll",
+        "lib/netstandard2.0/NuGet.Frameworks.xml",
+        "nuget.frameworks.5.10.0.nupkg.sha512",
+        "nuget.frameworks.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -468,7 +495,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "DL >= 1.0.0"
+      "DL >= 1.0.0",
+      "NuGet.Frameworks >= 5.10.0"
     ]
   },
   "packageFolders": {
@@ -513,6 +541,12 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "NuGet.Frameworks": {
+            "target": "Package",
+            "version": "[5.10.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

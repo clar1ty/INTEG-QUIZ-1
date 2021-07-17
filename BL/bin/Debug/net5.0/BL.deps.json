@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "BL/1.0.0": {
         "dependencies": {
-          "DL": "1.0.0"
+          "DL": "1.0.0",
+          "NuGet.Frameworks": "5.10.0"
         },
         "runtime": {
           "BL.dll": {}
@@ -19,6 +20,14 @@
         "dependencies": {
           "System.Security.AccessControl": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0"
+        }
+      },
+      "NuGet.Frameworks/5.10.0": {
+        "runtime": {
+          "lib/netstandard2.0/NuGet.Frameworks.dll": {
+            "assemblyVersion": "5.10.0.7240",
+            "fileVersion": "5.10.0.7240"
+          }
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -118,6 +127,13 @@
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
+    },
+    "NuGet.Frameworks/5.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RaXCqj2ZImTVV0DhlwMkE7S7EoOxqkdpmg4YNeZc5DnFpMMC7HYj6TbNTufK25JN/QhKfftuiWf/oqaYkZhnAA==",
+      "path": "nuget.frameworks/5.10.0",
+      "hashPath": "nuget.frameworks.5.10.0.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
