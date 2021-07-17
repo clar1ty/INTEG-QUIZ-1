@@ -10,70 +10,11 @@ namespace BL
 {
     public class CMSLogic
     {
-        static List<string> showoptions = new List<string>()
-                    {
-                        "(1) Show me courier list.",
-                        "(2) Lemme create an account.",
-                        "(3) Lemme delete  a nub account.",
-                        "(4) NVM, just exit."
-                    };
-        static public void ProcessActionsForAdmin()
+        static public void DisplayCourierData()
         {
-            for (int adminchoice = GetUserChoice();
-                adminchoice != 4;
-                adminchoice = GetUserChoice())
-            {
-                switch (adminchoice)
-                {
-                    case 1:
-                        Console.Clear();
-                        SqlData.DisplayCourierData();
-                        break;
-                    case 2:
-                        Console.Clear();
-                        CreateNewAccount();
-                        break;
-                    case 3:
-                        Console.Clear();
-                        DeleteAnAccount();
-                        break;
-                    default:
-                        Console.Clear();
-                        Console.WriteLine("What are you doing!? Try again bruh!");
-                        break;
-                }
-                Console.WriteLine();
-            }
-            Console.Clear();
-            Console.WriteLine("Application exiting...");
-            Console.ReadKey();
+            SqlData.DisplayCourierData();
         }
-        static void ShowOptions()
-        {
-            Console.WriteLine("Sup admin, wachu wanna do now?\n");
-
-            foreach (var option in showoptions)
-            {
-                Console.WriteLine(option);
-            }
-        }
-
-        static int GetUserChoice()
-        {
-            try
-            {
-                ShowOptions();
-                Console.Write("Choice: ");
-                return Convert.ToInt32(Console.ReadLine());
-            }
-            catch
-            {
-                Console.Clear();
-                Console.WriteLine("Error occured. Please try again");
-                return GetUserChoice();
-            }
-        }
-        static void CreateNewAccount()
+        static public void CreateAnAccount()
         {
             string name, id; int contact;
             Console.WriteLine("Yo, give me the following details:\n");
@@ -93,11 +34,9 @@ namespace BL
 
             SqlData.CreateAnAccount(name, id, contact);
         }
-
-        static void DeleteAnAccount()
+        static public void DeleteAnAccount()
         {
             SqlData.DisplayCourierData();
-
 
             Console.WriteLine("Yo, gimme the name of this nub u wanna DELETE!\n");
             Console.Write("Name: ");
@@ -121,6 +60,7 @@ namespace BL
 
             SqlData.DeleteAnAccount(name);
         }
+        
 
     }
 }
